@@ -5,6 +5,8 @@ import openmeteo_requests
 import requests_cache
 from retry_requests import retry
 
+
+#123
 # Setup the Open-Meteo API client with cache and retry on error
 cache_session = requests_cache.CachedSession('.cache', expire_after = -1)
 retry_session = retry(cache_session, retries = 5, backoff_factor = 0.2)
@@ -68,7 +70,7 @@ hourly_data["direct_radiation"] = hourly_direct_radiation
 hourly_dataframe = pd.DataFrame(data = hourly_data)
 print("\nHourly data\n", hourly_dataframe)
 
-# preparing data for hnm
+# preparing data for hmm
 
 # normalizing values
 
